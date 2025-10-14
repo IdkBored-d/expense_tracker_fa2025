@@ -18,14 +18,21 @@ class _ExpensesState extends State<Expenses>{
       date: DateTime.now(),
       category: Category.leisure,
     ),
+        Expense(
+      title: 'Fries',
+      amount: 5.45,
+      date: DateTime.now(),
+      category: Category.leisure,
+    ),
   ];
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [Text("Chart"), 
-        ExpensesList(expenses:_registeredExpenses)
+        children: [
+          Text("Chart"), 
+        Expanded(child: ExpensesList(expenses: _registeredExpenses))
         ]),
     );
   }
