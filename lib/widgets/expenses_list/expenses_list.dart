@@ -1,4 +1,4 @@
-import 'package:expense_tracker_fa2025/expenses_list/expenses_item.dart';
+import 'package:expense_tracker_fa2025/widgets/expenses_list/expenses_item.dart';
 import 'package:expense_tracker_fa2025/models/expense.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class ExpensesList extends StatelessWidget{
         key:ValueKey(expenses[index]),
         background: Container(
           margin: EdgeInsets.symmetric(
-            horizontal: Theme.of(context).cardTheme.margin!.horizontal
+            horizontal: 16
           ),
           color: Theme.of(context).colorScheme.error,
         ),
