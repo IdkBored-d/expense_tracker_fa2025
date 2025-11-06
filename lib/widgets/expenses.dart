@@ -1,3 +1,4 @@
+import 'package:expense_tracker_fa2025/widgets/chart/chart.dart';
 import 'package:expense_tracker_fa2025/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker_fa2025/models/expense.dart';
 import 'package:expense_tracker_fa2025/widgets/new_expense.dart';
@@ -72,6 +73,7 @@ class _ExpensesState extends State<Expenses>{
     return Scaffold(
       appBar: AppBar(
         title: const Text('Expense Tracker'),
+        centerTitle: true, 
         actions: [
           IconButton(
             onPressed: _openAddExpenseOverlay,
@@ -81,7 +83,7 @@ class _ExpensesState extends State<Expenses>{
       ),
       body: Column(
         children: [
-          Text("Chart"), 
+          Chart(expenses:_registeredExpenses), 
         Expanded(child: mainContent)
         ]),
     );
